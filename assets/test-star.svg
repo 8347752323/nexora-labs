@@ -1,0 +1,96 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <defs>
+    <!-- Filter for clean subtle glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Petal 1: Azure / Blue (Top) -->
+    <linearGradient id="p1_main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#00D2FF" />
+    </linearGradient>
+    <linearGradient id="p1_fold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Petal 2: Lavender / Indigo / Violet (Top-Right) -->
+    <linearGradient id="p2_main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#A78BFA" />
+    </linearGradient>
+    <linearGradient id="p2_fold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <!-- Petal 3: Magenta / Fuchsia (Bottom-Right) -->
+    <linearGradient id="p3_main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#E879F9" />
+    </linearGradient>
+    <linearGradient id="p3_fold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333EA" />
+      <stop offset="100%" stop-color="#C026D3" />
+    </linearGradient>
+
+    <!-- Petal 4: Electric Blue / Azure (Bottom-Left) -->
+    <linearGradient id="p4_main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="p4_fold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+
+    <!-- Petal 5: Bright Cyan / Turquoise (Left) -->
+    <linearGradient id="p5_main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#00F5FF" />
+    </linearGradient>
+    <linearGradient id="p5_fold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0E7490" />
+    </linearGradient>
+  </defs>
+
+  <!-- Group centered at (250, 250) -->
+  <g transform="translate(250, 250)">
+    <!-- 5 Petals rotated at 72 deg intervals -->
+    <!-- Petal 1 (Top, angle ~ -54 deg or -90+36) -->
+    <g transform="rotate(-54)">
+      <!-- Main Facet (Outer Light) -->
+      <polygon points="0,-160 55,-75 0,-15" fill="url(#p1_main)" />
+      <!-- Fold Facet (Inner Shadow) -->
+      <polygon points="0,-160 0,-15 -52,-80" fill="url(#p1_fold)" />
+    </g>
+
+    <!-- Petal 2 (Top-Right, 18 deg) -->
+    <g transform="rotate(18)">
+      <polygon points="0,-160 55,-75 0,-15" fill="url(#p2_main)" />
+      <polygon points="0,-160 0,-15 -52,-80" fill="url(#p2_fold)" />
+    </g>
+
+    <!-- Petal 3 (Bottom-Right, 90 deg) -->
+    <g transform="rotate(90)">
+      <polygon points="0,-160 55,-75 0,-15" fill="url(#p3_main)" />
+      <polygon points="0,-160 0,-15 -52,-80" fill="url(#p3_fold)" />
+    </g>
+
+    <!-- Petal 4 (Bottom-Left, 162 deg) -->
+    <g transform="rotate(162)">
+      <polygon points="0,-160 55,-75 0,-15" fill="url(#p4_main)" />
+      <polygon points="0,-160 0,-15 -52,-80" fill="url(#p4_fold)" />
+    </g>
+
+    <!-- Petal 5 (Top-Left, 234 deg) -->
+    <g transform="rotate(234)">
+      <polygon points="0,-160 55,-75 0,-15" fill="url(#p5_main)" />
+      <polygon points="0,-160 0,-15 -52,-80" fill="url(#p5_fold)" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+
+    <!DOCTYPE html>
+    <html class="dark">
+    <head>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        body { background: #05070d; color: white; font-family: system-ui; padding: 40px; }
+        .light body { background: #f8fafc; color: #0f172a; }
+        html.light .dark-logo { display: none !important; }
+        html.light .light-logo { display: block !important; }
+        html:not(.light) .light-logo { display: none !important; }
+        html:not(.light) .dark-logo { display: block !important; }
+      </style>
+    </head>
+    <body class="space-y-10">
+      <div>
+        <h3 class="text-xs font-mono text-cyan-400 mb-2">Variant 1: Exact Uploaded Logo (h-10 / 40px)</h3>
+        <header class="h-24 bg-[#05070d] border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center group">
+            <img src="/assets/nexora-logo.png" alt="Nexora" class="h-10 md:h-11 w-auto object-contain dark-logo">
+            <img src="/assets/nexora-logo-light.png" alt="Nexora" class="h-10 md:h-11 w-auto object-contain light-logo">
+          </a>
+          <span class="text-slate-400 text-sm">Navigation Links...</span>
+        </header>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono text-purple-400 mb-2">Variant 2: Exact Uploaded Logo + Subtle 'LABS' Badge</h3>
+        <header class="h-24 bg-[#05070d] border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-2 group">
+            <img src="/assets/nexora-logo.png" alt="Nexora" class="h-10 md:h-11 w-auto object-contain dark-logo">
+            <img src="/assets/nexora-logo-light.png" alt="Nexora" class="h-10 md:h-11 w-auto object-contain light-logo">
+            <span class="font-bold text-xs md:text-sm tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">LABS</span>
+          </a>
+          <span class="text-slate-400 text-sm">Navigation Links...</span>
+        </header>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono text-emerald-400 mb-2">Variant 3: New Mark in Sleek Glass Container + Wordmark</h3>
+        <header class="h-24 bg-[#05070d] border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-3.5 group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-700/80 p-2 flex items-center justify-center shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-all">
+              <img src="/assets/nexora-mark.png" alt="Nexora Mark" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-extrabold tracking-tight text-2xl md:text-3xl text-white">Nexora</span>
+              <span class="font-bold text-xs md:text-sm tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">LABS</span>
+            </div>
+          </a>
+          <span class="text-slate-400 text-sm">Navigation Links...</span>
+        </header>
+      </div>
+    </body>
+    </html>
+  

@@ -1,0 +1,60 @@
+
+    <!DOCTYPE html>
+    <html class="dark">
+    <head>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        body { background: #05070d; color: white; font-family: system-ui; padding: 40px; }
+        .light { background: #f8fafc; color: #0f172a; }
+      </style>
+    </head>
+    <body class="space-y-12">
+      <h1 class="text-2xl font-bold">Logo Sizes & Clarity Test (Dark Mode)</h1>
+
+      <!-- Option A: Full Transparent Logo (H-10, H-12, H-14) -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold text-slate-400">Option 1: Full Horizontal Logo Image</h3>
+        <div class="flex items-center gap-8 p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div>
+            <span class="text-xs text-slate-500 block mb-1">Height: 38px (Compact)</span>
+            <img src="/assets/nexora-logo-transparent.png" class="h-[38px] w-auto object-contain">
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block mb-1">Height: 46px (Balanced)</span>
+            <img src="/assets/nexora-logo-transparent.png" class="h-[46px] w-auto object-contain">
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block mb-1">Height: 54px (Prominent)</span>
+            <img src="/assets/nexora-logo-transparent.png" class="h-[54px] w-auto object-contain">
+          </div>
+        </div>
+      </div>
+
+      <!-- Option B: Mark Container + Crisp Typography -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold text-slate-400">Option 2: Standalone Mark + Wordmark</h3>
+        <div class="flex items-center gap-8 p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-700/80 p-1.5 flex items-center justify-center shadow-lg shadow-cyan-500/10">
+              <img src="/assets/nexora-mark-transparent.png" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-extrabold tracking-widest text-2xl text-white">NEXORA</span>
+              <span class="font-bold text-sm tracking-widest text-cyan-400">LABS</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 rounded-2xl bg-slate-950 border border-slate-700/80 p-2 flex items-center justify-center shadow-xl shadow-cyan-500/20">
+              <img src="/assets/nexora-mark.svg" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold tracking-tight text-3xl text-white">Nexora</span>
+              <span class="font-bold text-xs tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent ml-1">LABS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+  

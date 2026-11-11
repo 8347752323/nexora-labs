@@ -1,0 +1,83 @@
+const { chromium } = require('@playwright/test');
+const fs = require('fs');
+
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+
+  const html = `
+    <!DOCTYPE html>
+    <html class="dark">
+    <head>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>body { background: #05070d; color: white; font-family: system-ui; }</style>
+    </head>
+    <body class="p-8 space-y-12">
+      <div>
+        <h2 class="text-sm font-mono text-cyan-400 mb-4">HEADER OPTION A: Full Official Logo Image (Height: 44px)</h2>
+        <header class="h-24 bg-[#05070d]/90 border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center group">
+            <img src="/assets/nexora-logo.png" alt="Nexora" class="h-11 md:h-12 w-auto object-contain">
+          </a>
+          <div class="flex items-center gap-6 text-sm text-slate-300">
+            <span>Services</span>
+            <span>Resources</span>
+            <span>Portfolio</span>
+            <span>About Us</span>
+          </div>
+        </header>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-mono text-purple-400 mb-4">HEADER OPTION B: Mark in Rounded Container + 'Nexora' (Title Case) + 'LABS'</h2>
+        <header class="h-24 bg-[#05070d]/90 border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-3.5 group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-700/80 p-2 flex items-center justify-center shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-all">
+              <img src="/assets/nexora-mark.png" alt="Nexora Mark" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-extrabold tracking-wide text-2xl md:text-3xl text-white">Nexora</span>
+              <span class="font-bold text-sm tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">LABS</span>
+            </div>
+          </a>
+          <div class="flex items-center gap-6 text-sm text-slate-300">
+            <span>Services</span>
+            <span>Resources</span>
+            <span>Portfolio</span>
+            <span>About Us</span>
+          </div>
+        </header>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-mono text-emerald-400 mb-4">HEADER OPTION C: Vector Mark in Container + 'Nexora' (Title Case) + 'LABS'</h2>
+        <header class="h-24 bg-[#05070d]/90 border border-slate-800 rounded-2xl px-8 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-3.5 group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-700/80 p-2 flex items-center justify-center shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-all">
+              <img src="/assets/nexora-mark.svg" alt="Nexora Mark Vector" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-extrabold tracking-wide text-2xl md:text-3xl text-white">Nexora</span>
+              <span class="font-bold text-sm tracking-widest bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">LABS</span>
+            </div>
+          </a>
+          <div class="flex items-center gap-6 text-sm text-slate-300">
+            <span>Services</span>
+            <span>Resources</span>
+            <span>Portfolio</span>
+            <span>About Us</span>
+          </div>
+        </header>
+      </div>
+    </body>
+    </html>
+  `;
+
+  fs.writeFileSync('assets/compare-headers.html', html);
+  await page.goto('http://localhost:3000/assets/compare-headers.html');
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: 'screenshots/compare-headers.png', fullPage: true });
+  console.log('Saved screenshots/compare-headers.png');
+
+  await browser.close();
+})();
