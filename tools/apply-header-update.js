@@ -106,6 +106,19 @@ function getHeaderHtml(activePage) {
                   </p>
                 </a>
 
+                <!-- Custom Web Development -->
+                <a href="${isIndex ? '#contact' : '/#contact'}" onclick="selectService('Custom Web Development'); return ${isIndex ? 'false' : 'true'};" class="text-left p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/60 transition-all duration-200 group flex flex-col justify-between h-[112px] focus:outline-none">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-800/80 text-indigo-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <i data-lucide="layers" class="w-4 h-4"></i>
+                    </div>
+                    <span class="text-xs font-bold text-white group-hover:text-indigo-300 transition-colors truncate">Custom Web Development</span>
+                  </div>
+                  <p class="text-[11px] text-slate-400 line-clamp-2 leading-snug">
+                    Bespoke web applications, tailored architectures & enterprise systems.
+                  </p>
+                </a>
+
                 <!-- AI Chatbots -->
                 <button onclick="closeServicesPopup(); if(window.__nexoraOpenChat) window.__nexoraOpenChat();" class="text-left p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-emerald-500/60 transition-all duration-200 group flex flex-col justify-between h-[112px] focus:outline-none">
                   <div class="flex items-center gap-2">
@@ -325,6 +338,10 @@ function getHeaderHtml(activePage) {
                   <a href="/website-development.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-blue-300 transition">
                     <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400"></i>
                     <span>Website Development</span>
+                  </a>
+                  <a href="${isIndex ? '#contact' : '/#contact'}" ${mobileContactAction} class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-indigo-300 transition">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-400"></i>
+                    <span>Custom Web Development</span>
                   </a>
                   <button onclick="closeMobileMenu(); if(window.__nexoraOpenChat) window.__nexoraOpenChat();" class="w-full flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-emerald-300 transition text-left focus:outline-none">
                     <i data-lucide="bot" class="w-3.5 h-3.5 text-emerald-400"></i>

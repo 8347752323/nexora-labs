@@ -503,7 +503,7 @@
 
       if (lower.includes('website') || lower.includes('site') || lower.includes('landing') || lower.includes('portfolio') || lower.includes('e-commerce') || lower.includes('ecommerce')) {
         handleOptionSelect('website');
-      } else if (lower.includes('web app') || lower.includes('application') || lower.includes('saas') || lower.includes('dashboard') || lower.includes('admin')) {
+      } else if (lower.includes('custom') || lower.includes('web app') || lower.includes('application') || lower.includes('saas') || lower.includes('dashboard') || lower.includes('admin')) {
         handleOptionSelect('webapp');
       } else if (lower.includes('mobile') || lower.includes('app') || lower.includes('android') || lower.includes('ios') || lower.includes('flutter') || lower.includes('react native')) {
         handleOptionSelect('mobile');
